@@ -1,124 +1,87 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: JavaDrip
 
-## Overview
+Project 2 by:  Cliff Conolly & Tom Tidswell
 
+General Assembly Project 2:  App that consumes a public API
 
-# JavaDrip - plan your day while you sip
+Goal:
 
-## JOURNEYS
-
-Journey A - first time access
-1. User chooses and saves location and name
-2. Shows the javaDrip
-
-Journey B - returning user
-Shows the javaDrip
-
-Journey C - user wants to change location
-1. User chooses to switch cities   (or maybe detect current location based on browser location API)
-2. User chooses and saves location
-3. Shows javaDrip
-
----
-
-## WIREFRAMES
-1. - the javaDrip
-2. - choosing and setting location
-
----
-
-## PSEUDOCODE
-A. - the javaDrip
-
-Display title - "What to wear"
-
-When clicked, the state changes, and does the following.....
-
-Hardcode to London (placeholder for future for other locations)
-
-Use the location to fetch the next morning's weather from the OpenWeatherMap API
-
-Run the rules on the weather data to determine the clothes the user should wear,
-
-Save the recommendations into state along with the weather data - that retriggers the render
-
-Render the recommendation in the component
-
----
-
-## RULES
-Work out what the weather 'feels like' based on ???
-If the feels like is under 10 deg, recommend a coat
-If the feels like is under 15 deg, recommend a jumper
-If it is raining, recommend an umberella
-If it is snowing, recommend wellies and a coat
+* **Consume a public API**
+* **Have several components**
+* **The app can include a router**
+* **Include wireframes**
+* Have **semantically clean HTML**
+* **Be deployed online**
 
 
+Timeframe: 2 days
+
+Technologies used
+* JavaScript (ES6)
+* HTML5
+* CSS
+* GitHub
+
+JavaDrip - A utility app to help plan your day for transport and weather
+
+You can find a hosted version here ----> https://github.com/Cliff-Conolly/sei-javadrip
+
+App overview
+
+The premise of the app is to give you a quick glimpse of the Tube service and the weather; tips on what to wear given the temperature. In addition it also tells of you of the available Santander bikes that are closest to you, by using your postcode that you would have entered.
 
 
+App Instructions:
+1.	The user selects the setting for the city that they are in. At the moment there are only 5 major UK cities that the API is pulling data from:
+
+* London
+* Manchester
+* Leeds
+* Bristol
+* Glasgow
 
 
+2.	Once a location and postcode is set, the user will save it to their profile. Once they hit the 'Plan Your Day' button the following options will appear:
 
-The second project is to, working as a small group, **build a React application** that consumes a **public API**.
+        * a.) What to wear?
 
-### Technical Requirements
+            API: OpenWeatherMap (https://openweathermap.org/api)
 
-Your app must:
+            The suggestions of material and clothing is dependent on the range of temperature in increments of 10° (0° - 10 etc.) in which the temperature for the users current location was pulled from the API. The suggestions for clothing were based upon a manual input that is a if/else function. Research was done to see what materials and clothing are suited for the respective 10° temp ranges, and depending on the temperature that was pulled in from the API the function would then suggest what to wear where in the range that the current temperature fell.
 
-* **Consume a public API** – this could be anything but it must make sense for your project.
-* **Have several components** - At least one classical and one functional.
-* **The app can include a router** - with several "pages".
-* **Include wireframes** - that you designed before building the app.
-* Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
-* **Be deployed online** and accessible to the public. (We will cover how to do this next week, not required on first deadline)
 
----
+        * b.) Travel Status
 
-## Necessary Deliverables
+            API: TFL (https://api.tfl.gov.uk): Line
 
-* A **working application**, hosted somewhere on the internet
-* A **link to your hosted working app** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
-* **A `readme.md` file** with:
-  * Explanations of the **technologies** used
-    * A couple of paragraphs about the **general approach you took**
-    * **Installation instructions** for any dependencies
-    * Link to your **wireframes** – sketches of major views / interfaces in your application
-   * Descriptions of any **unsolved problems** or **major hurdles** your team had to overcome
+            The Tube schedule is consumed from the TFL API, with realtime updates which show the service status.
 
----
 
-## Suggested Ways to Get Started
+        * c.) Santander Bikes
 
-* **Sign Off** Before starting you must get your project idea signed off by an Instructor/TA, sign off wil require a basic wireframe and working Insomnia request to your chosen API.
-* **Don’t hesitate to write throwaway code** to solve short term problems.
-* **Read the docs for whatever technologies / frameworks / APIs you use**.
-* **Write DRY code**.
-* **Be consistent with your code style.**
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Keep user stories small and well-defined**, and remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-* **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-* **Make it all well-formatted.** Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc?
-* **Comment your code.** Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-* **Write pseudocode before you write actual code.** Thinking through the logic of something helps.
+            API: TFL (https://api.tfl.gov.uk): BikePoint
 
----
+            The Santander Bike availability is consumed from the TFL API, with the nearest station to your postcode and the amount of bikes available.
 
-## Useful Resources
 
-* **[React](https://reactjs.org/)**
-*  **[Public APIs @ Programmable Web](https://www.programmableweb.com/)**
+Process:
 
----
+The initial concept was to make a utility app that one could use while sitting having a coffee in the morning. It would enable you to see what the transport status was for the Tube line and the Santander bikes. In addition, it would suggest what to wear given the current weather.
 
-## Project Feedback + Evaluation
+After carefully laying out the purpose for the app, we had to break each function that is required down so that we could figure out what components we would need. Canva.com was used to draw a mock up of how it would look, and where the functioning buttons would be placed. Once we got the fundamentals down, we started to code and structure the main body.
 
-* __Project Workflow__: Did you complete the user stories, wireframes, task tracking as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
+We set about first getting the data from the TFL API for the line service, and only when we had finished the MVP (minimum viable product) did we decide to add the data for the Santander BikePoint's which was relatively easy. The suggestions for the clothing was researched online and was basically seeded.
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+Once we had all the API data being consumed, we then proceeded to design with straight CSS and adding a colour scheme that was cheerful given that it would be used in the morning when users weren't at their cheeriest.
 
-* __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a login button and an index page)?
+Challenges:
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors as we have in class?
+The biggest challenge was initially getting the data from the TFL API, but once that was figured out it was mostly the time constraint that we were up against. I must say that this was the smoothest project that I worked on during the course, as we thought out methodically what the purpose was. Therefore, it was just a matter of getting the code to function to output what was needed.
 
-* __Problem Solving__: Are you able to defend why you implemented your solution in a certain way? Can you demonstrated that you thought through alternative implementations? _(Note that this part of your feedback evaluation will take place during your one-on-one code review with your instructors, after you've completed the project.)_
+Wins:
+
+Having the app function as conceived was very rewarding. It was out first foray into consuming an API, and whereby initially the learning curve was slow, we eventually were able to pull the data that we required.
+
+Future features:
+
+Future iterations could include a new design scheme and maybe the use of GPS location for mobile users.
