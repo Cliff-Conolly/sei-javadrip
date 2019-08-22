@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: JavaDrip
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Software Engineering Immersive Project #2: JavaDrip
 
 Project 2 by:  Cliff Conolly & Tom Tidswell
 
@@ -16,7 +16,7 @@ Goal:
 
 Timeframe: 2 days
 
-Technologies used
+Technologies used:
 * JavaScript (ES6)
 * HTML5
 * CSS
@@ -26,7 +26,7 @@ JavaDrip - A utility app to help plan your day for transport and weather
 
 You can find a hosted version here ----> https://github.com/Cliff-Conolly/sei-javadrip
 
-App overview
+App overview:
 
 The premise of the app is to give you a quick glimpse of the Tube service and the weather; tips on what to wear given the temperature. In addition it also tells of you of the available Santander bikes that are closest to you, by using your postcode that you would have entered.
 
