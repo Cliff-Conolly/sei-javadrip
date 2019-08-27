@@ -55,7 +55,6 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
 
 
-
         * c.) Santander Bikes
 
             API: TFL (https://api.tfl.gov.uk): BikePoint
@@ -63,7 +62,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
             The Santander Bike availability is consumed from the TFL API, with the nearest station to your postcode and the amount of bikes available.
 
 
-![Settings](src/assets/screenshots/bikes.png)
+![Settings](src/assets/screenshots/bikes.gif)
 
 ---
 
