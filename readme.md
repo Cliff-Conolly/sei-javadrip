@@ -24,8 +24,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 ---
 
 
-## Overview
-![Home Page](src/assets/screenshots/home.gif)
+## App Instructions:
 1.	The user is greeted on the Home Page with the options to choose from in the top right corner.	The user selects the setting for the city that they are in. At the moment there are only 5 major UK cities that the API is pulling data from:
 
 * London
@@ -34,7 +33,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 * Bristol
 * Glasgow
 
-![Settings](src/assets/screenshots/home.png)
+![Home Page](src/assets/screenshots/home.gif)
 
 
 2.	Once a location and postcode is set, the user will save it to their profile. When they hit the 'Plan Your Day' button the following options will appear:
@@ -45,15 +44,14 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
             The suggestions of material and clothing is dependent on the range of temperature in increments of 10° (0° - 10 etc.) in which the temperature for the users current location was pulled from the API. The suggestions for clothing were based upon a manual input that is a if/else function. Research was done to see what materials and clothing are suited for the respective 10° temp ranges, and depending on the temperature that was pulled in from the API the function would then suggest what to wear where in the range that the current temperature fell.
 
-            ![Settings](src/assets/screenshots/what_to_wear.png)
+![Settings](src/assets/screenshots/wear.gif)
 
         * b.) Travel Status
 
             API: TFL (https://api.tfl.gov.uk): Line
 
             The Tube schedule is consumed from the TFL API, with realtime updates which show the service status.
-
-            ![Settings](src/assets/screenshots/travel_status.png)
+![Settings](src/assets/screenshots/travel_status.png)
 
 
 
@@ -65,7 +63,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
             The Santander Bike availability is consumed from the TFL API, with the nearest station to your postcode and the amount of bikes available.
 
 
-  ![Settings](src/assets/screenshots/bikes.png)
+![Settings](src/assets/screenshots/bikes.png)
 
 ---
 
