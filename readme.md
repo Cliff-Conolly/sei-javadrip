@@ -6,7 +6,7 @@ Project 2 by:
 
 ---
 
-## Overview:
+## Introduction:
 The premise of the app is to give you a quick glimpse of the Tube service and the weather (tips on what to wear given the temperature). In addition it also tells of you of the available Santander bikes that are closest to you, by using your postcode that you would have entered.
 
 ## Timeframe:
@@ -24,7 +24,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 ---
 
 
-## App Instructions:
+## Overview:
 1.	The user is greeted on the Home Page with the options to choose from in the top right corner.	The user selects the setting for the city that they are in. At the moment there are only 5 major UK cities that the API is pulling data from:
 
 * London
