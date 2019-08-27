@@ -51,7 +51,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
             API: TFL (https://api.tfl.gov.uk): Line
 
             The Tube schedule is consumed from the TFL API, with realtime updates which show the service status.
-![Settings](src/assets/screenshots/travel_status.png)
+![Settings](src/assets/screenshots/tube.gif)
 
 
 
