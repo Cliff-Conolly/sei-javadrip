@@ -203,13 +203,15 @@ if(!this.state.load) return (
 
 ```
 
-
-
 Having the app function as conceived was very rewarding. It was our first foray into consuming an API; initially the learning curve was slow but we eventually were able to pull the data that we required.
 
 ---
 
 ## Bugs:
+
+There is bug in the 'Switch User' button whereby it will go to a blank screen if the button is clicked after the user clicks 'Settings'. This will be looked at in the next iteration.
+
+![Settings](src/assets/screenshots/bug.gif)
 
 ---
 
