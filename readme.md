@@ -25,7 +25,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
 
 ## Overview
-![Home Page](src/assets/screenshots/home.png)
+![Home Page](src/assets/screenshots/home.gif)
 1.	The user is greeted on the Home Page with the options to choose from in the top right corner.	The user selects the setting for the city that they are in. At the moment there are only 5 major UK cities that the API is pulling data from:
 
 * London
