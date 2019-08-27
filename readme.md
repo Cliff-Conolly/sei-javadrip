@@ -7,7 +7,7 @@ Project 2 by:
 ---
 
 ## Overview:
-The premise of the app is to give you a quick glimpse of the Tube service and the weather; tips on what to wear given the temperature. In addition it also tells of you of the available Santander bikes that are closest to you, by using your postcode that you would have entered.
+The premise of the app is to give you a quick glimpse of the Tube service and the weather (tips on what to wear given the temperature). In addition it also tells of you of the available Santander bikes that are closest to you, by using your postcode that you would have entered.
 
 ## Timeframe:
 2 days (June 2019)
@@ -42,7 +42,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
             API: OpenWeatherMap (https://openweathermap.org/api)
 
-            The suggestions of material and clothing is dependent on the range of temperature in increments of 10° (0° - 10 etc.) in which the temperature for the users current location was pulled from the API. The suggestions for clothing were based upon a manual input that is a if/else function. Research was done to see what materials and clothing are suited for the respective 10° temp ranges, and depending on the temperature that was pulled in from the API the function would then suggest what to wear where in the range that the current temperature fell.
+            The suggestions of material and clothing is dependent on the range of temperature in increments of 10° (0° - 10 etc.) in which the temperature for the users current location was pulled from the API. The suggestions for clothing were based upon a manual input that is a if/else function. Research was done to see what materials and clothing are suited for the respective 10° temp ranges, and depending on the temperature that was pulled in from the API the function would then suggest what to wear in the range that the current temperature fell.
 
 ![Settings](src/assets/screenshots/wear.gif)
 
@@ -77,26 +77,6 @@ After carefully laying out the purpose for the app, we had to break each functio
 We set about first getting the data from the TFL API for the line service, and only when we had finished the MVP (minimum viable product) did we decide to add the data for the Santander BikePoint's which was relatively easy. The suggestions for the clothing was researched online and was basically seeded.
 
 Once we had all the API data being consumed, we then proceeded to design with straight CSS and adding a colour scheme that was cheerful given that it would be used in the morning when users weren't at their cheeriest.
-
----
-
-## Challenges:
-
-The biggest challenge was initially getting the data from the TFL API, but once that was figured out it was mostly the time constraint that we were up against. I must say that this was the smoothest project that I worked on during the course, as we thought out methodically what the purpose was. Therefore, it was just a matter of getting the code to function to output what was needed.
-
----
-
-## Wins:
-
-Having the app function as conceived was very rewarding. It was out first foray into consuming an API, and whereby initially the learning curve was slow, we eventually were able to pull the data that we required.
-
----
-
-## Future features:
-
-Future iterations could include a new design scheme and maybe the use of GPS location for mobile users.
-
----
 
 ## API Documentation
 
@@ -157,6 +137,7 @@ whatToWearRules({temp, id}) {
 
   ```
   TFL Tube line from TFL API
+
   axios.get('https://api.tfl.gov.uk/line/mode/tube/status')
     .then(({ data }) => {
       console.log(data)
@@ -175,3 +156,63 @@ whatToWearRules({temp, id}) {
           .then(res => this.setState({ points: res.data.places }))
           .catch(err => console.log(err))
       }
+```
+
+---
+
+## Challenges:
+
+The biggest challenge was initially getting the data from the TFL API, but once that was figured out it was mostly the time constraint that we were up against. I must say that this was the smoothest project that I worked on during the course, as we thought out methodically what the purpose was. Therefore, it was just a matter of getting the code to function to output what was needed.
+
+---
+
+## Wins:
+
+The app was coded so that each respective component would consider the loading speeds of the different API's involved. They would not all trigger simultaneously, but only when each respective API is selected by the user via a click handler.
+
+##### - What to wear? click handler:
+```
+if(!this.state.load) return (
+  <a className="button is-success is-large initial"
+    onClick={()=>this.toggleComponent()}>
+    <p>What to wear?</p><img src="./assets/What-to-wear-logo-1.png" className="wear" />
+  </a>
+)
+```
+##### - Whats going on Underground? click handler:
+
+```
+if(!this.state.load) return (
+  <a className="button is-success is-large initial"
+    onClick={()=>this.toggleComponent()}>
+    What&lsquo;s going on <img src="./assets/underground.png" className="underground" />
+  </a>
+)
+
+```
+
+##### - Bikes Nearby click handler:
+
+```
+if(!this.state.load) return (
+  <a className="button is-success is-large initial"
+    onClick={()=>this.toggleComponent()}>
+    Bikes nearby <img src="./assets/santan.png" className="bike" />
+  </a>
+)
+
+```
+
+
+
+Having the app function as conceived was very rewarding. It was our first foray into consuming an API; initially the learning curve was slow but we eventually were able to pull the data that we required.
+
+---
+
+## Bugs:
+
+---
+
+## Future features:
+
+Future iterations could include a new design scheme and maybe the use of GPS location for mobile users.
