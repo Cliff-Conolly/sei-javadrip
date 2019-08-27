@@ -72,6 +72,8 @@ The initial concept was to make a utility app that one could use while sitting h
 
 After carefully laying out the purpose for the app, we had to break each function that is required down so that we could figure out what components we would need. Canva.com was used to draw a mock up of how it would look, and where the functioning buttons would be placed. Once we got the fundamentals down, we started to code and structure the main body.
 
+  ![Settings](src/assets/screenshots/canva.gif)
+
 We set about first getting the data from the TFL API for the line service, and only when we had finished the MVP (minimum viable product) did we decide to add the data for the Santander BikePoint's which was relatively easy. The suggestions for the clothing was researched online and was basically seeded.
 
 Once we had all the API data being consumed, we then proceeded to design with straight CSS and adding a colour scheme that was cheerful given that it would be used in the morning when users weren't at their cheeriest.
@@ -94,7 +96,7 @@ Having the app function as conceived was very rewarding. It was out first foray 
 
 Future iterations could include a new design scheme and maybe the use of GPS location for mobile users.
 
---
+---
 
 ## API Documentation
 
@@ -151,7 +153,7 @@ whatToWearRules({temp, id}) {
   ]
   ```
 
-  #### Data fetch from TFL API for Tube and Santander Bikes
+#### Data fetch from TFL API for Tube and Santander Bikes
 
   ```
   TFL Tube line from TFL API
