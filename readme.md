@@ -44,6 +44,8 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
             The suggestions of material and clothing is dependent on the range of temperature in increments of 10° (0° - 10 etc.) in which the temperature for the users current location was pulled from the API. The suggestions for clothing were based upon a manual input that is a if/else function. Research was done to see what materials and clothing are suited for the respective 10° temp ranges, and depending on the temperature that was pulled in from the API the function would then suggest what to wear in the range that the current temperature fell.
 
+            API: Postcodes.io (https://api.postcodes.io)
+
 ![Settings](src/assets/screenshots/wear.gif)
 
         * b.) Travel Status
