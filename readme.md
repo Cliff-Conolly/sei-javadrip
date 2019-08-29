@@ -158,6 +158,23 @@ whatToWearRules({temp, id}) {
       }
 ```
 
+#### Data fetch from Postcodes.io API
+
+```
+confirmPostcode(e){
+  e.preventDefault()
+  if(!this.state.data.postcode || this.state.data.postcode === ' ') return null
+  axios.get(`https://api.postcodes.io/postcodes/${this.state.data.postcode}`)
+    .then(res => {
+      console.log(res.data)
+      Auth.setUserData({ postcode: this.state.data.postcode, lon: res.data.result.longitude, lat: res.data.result.latitude })
+      this.props.history.push('/')
+    })
+    .catch(err => this.setState({ errors: { postcode: err } }))
+}
+
+```
+
 ---
 
 ## Challenges:
