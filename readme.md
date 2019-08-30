@@ -46,6 +46,46 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
 
             API: Postcodes.io (https://api.postcodes.io)
 
+            #### Seeds for clothing suggestions:
+            ```
+            whatToWearRules({temp, id}) {
+
+              const suggestions = [
+                {  //30 degrees and above
+                  from: 30,
+                  to: 100,
+                  materials: 'Light cotton, rayon, linen, performance polyester',
+                  colour: 'Light',
+                  outerwear: 'None or only light breathable material',
+                  layering: 'Only light breathable material'
+                },
+                { //Between 20 and 30 degrees
+                  from: 20,
+                  to: 30,
+                  materials: 'Medium cotton/denim, rayon, perforemance polyester',
+                  colour: 'Light',
+                  outerwear: 'Swearshirt, light jumper',
+                  layering: 'tshirt'
+                },
+                { // Between 10 and 20 degrees
+                  from: 10,
+                  to: 20,
+                  materials: 'Medium cotton/denim or polyester',
+                  colour: 'Dark or light',
+                  outerwear: 'Light jacket or jumper',
+                  layering: 'tshirt and a sweatshirt'
+                },
+                { // Below 10 degrees
+                  from: -30,
+                  to: 10,
+                  materials: 'Wool, cashmere, heavy cotton, flannel, synthetic fibers',
+                  colour: 'Dark',
+                  outerwear: 'Gore-Tex shell, heavy wool, down, heavy cotton',
+                  layering: 'Thermal underwear, sweater'
+                }
+              ]
+              ```
+
 ![Settings](src/assets/screenshots/wear.gif)
 
         * b.) Travel Status
@@ -95,45 +135,7 @@ axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},uk&units=met
 }
 ```
 
-#### Seeds for clothing suggestions:
-```
-whatToWearRules({temp, id}) {
 
-  const suggestions = [
-    {  //30 degrees and above
-      from: 30,
-      to: 100,
-      materials: 'Light cotton, rayon, linen, performance polyester',
-      colour: 'Light',
-      outerwear: 'None or only light breathable material',
-      layering: 'Only light breathable material'
-    },
-    { //Between 20 and 30 degrees
-      from: 20,
-      to: 30,
-      materials: 'Medium cotton/denim, rayon, perforemance polyester',
-      colour: 'Light',
-      outerwear: 'Swearshirt, light jumper',
-      layering: 'tshirt'
-    },
-    { // Between 10 and 20 degrees
-      from: 10,
-      to: 20,
-      materials: 'Medium cotton/denim or polyester',
-      colour: 'Dark or light',
-      outerwear: 'Light jacket or jumper',
-      layering: 'tshirt and a sweatshirt'
-    },
-    { // Below 10 degrees
-      from: -30,
-      to: 10,
-      materials: 'Wool, cashmere, heavy cotton, flannel, synthetic fibers',
-      colour: 'Dark',
-      outerwear: 'Gore-Tex shell, heavy wool, down, heavy cotton',
-      layering: 'Thermal underwear, sweater'
-    }
-  ]
-  ```
 
 #### Data fetch from TFL API for Tube and Santander Bikes
 
