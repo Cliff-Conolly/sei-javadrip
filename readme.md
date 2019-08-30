@@ -47,7 +47,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
             API: Postcodes.io (https://api.postcodes.io)
 
 #### Seeds for clothing suggestions:
-            ```
+```
             whatToWearRules({temp, id}) {
 
               const suggestions = [
@@ -84,7 +84,7 @@ The premise of the app is to give you a quick glimpse of the Tube service and th
                   layering: 'Thermal underwear, sweater'
                 }
               ]
-              ```
+```
 
 ![Settings](src/assets/screenshots/wear.gif)
 
